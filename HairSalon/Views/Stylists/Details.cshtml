@@ -4,17 +4,18 @@
 
 @model HairSalon.Models.Stylist
 @using HairSalon.Models;
+<div class="content">
+  <h3>Stylist Info:</h3>
+  <hr />
+  <h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) | @Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone) | @Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email) [@Html.ActionLink("Edit", "Edit", new { id = Model.StylistId })]</h5>
+  <br>
+  <h5>Current clients: </h5>
+  @foreach (Client client in Model.Clients)
+  {
+    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
+  }
 
-<h3>Stylist Info:</h3>
-<hr />
-<h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) | @Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone) | @Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email) [@Html.ActionLink("Edit", "Edit", new { id = Model.StylistId })]</h5>
-<br>
-<h5>Current clients: </h5>
-@foreach (Client client in Model.Clients)
-{
-  <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
-}
-
-<br>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Back to staff list", "Index")</p>
+  <br>
+  <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
+  <p>@Html.ActionLink("Back to staff list", "Index")</p>
+</div>
