@@ -51,7 +51,7 @@ namespace HairSalon.Controllers
     {
       _db.Entry(stylist).State = EntityState.Modified;
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = stylist.StylistId });
     }
 
     public ActionResult Delete(int id)
