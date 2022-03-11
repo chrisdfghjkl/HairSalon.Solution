@@ -5,7 +5,8 @@
 @model HairSalon.Models.Stylist
 
 <div class="content">
-  <h4 style="margin-bottom: 10px;">Input stylist information</h4>
+  <h3 style="margin-bottom: 10px;">Input stylist information</h3>
+  <hr />
   @using (Html.BeginForm())
   {
     @Html.LabelFor(model => model.Name, "Name")
