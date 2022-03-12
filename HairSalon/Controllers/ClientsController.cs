@@ -54,7 +54,7 @@ namespace Clients.Controllers
     {
       _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = client.ClientId });
     }
   }
 }
