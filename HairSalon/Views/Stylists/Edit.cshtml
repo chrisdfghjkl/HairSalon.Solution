@@ -13,13 +13,13 @@
   {
     @Html.HiddenFor(model => model.StylistId)
 
-    @Html.LabelFor(model => model.Name, "Name")
+    @Html.LabelFor(model => model.Name, "Name:")
     @Html.EditorFor(model => model.Name)
     <br>
-    @Html.LabelFor(model => model.Phone, "Phone Number")
+    @Html.LabelFor(model => model.Phone, "Phone Number:")
     @Html.EditorFor(model => model.Phone)
     <br>
-    @Html.LabelFor(model => model.Email, "Email Address")
+    @Html.LabelFor(model => model.Email, "Email Address:")
     @Html.EditorFor(model => model.Email)
     <br>
     <input type="submit" value="Save changes" class="btn btn-primary" />
