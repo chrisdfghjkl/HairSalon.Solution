@@ -4,6 +4,7 @@
 
 @model HairSalon.Models.Stylist
 @using HairSalon.Models;
+
 <div class="content">
   <h3>Stylist Info:</h3>
   <hr />
@@ -16,6 +17,7 @@
   }
 
   <br>
+  <hr />
   <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
   <p>@Html.ActionLink("Back to staff list", "Index")</p>
 </div>
